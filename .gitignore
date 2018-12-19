@@ -1,0 +1,21 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode
+*.code-workspace
+
+# System Files
+.DS_Store
+Thumbs.db
