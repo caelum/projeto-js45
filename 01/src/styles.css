@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+/* Ajuste de altura */
+.mdl-layout {
+  height: 100vh;
+}
+
+/* Ajuste do Menu */
+@media (min-width: 1025px) {
+  .mdl-layout--fixed-drawer > .mdl-layout__header {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+}
