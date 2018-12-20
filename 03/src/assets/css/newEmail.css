@@ -1,0 +1,38 @@
+.newEmail {
+  position: fixed;
+  z-index: 10;
+  bottom: 0%;
+  right: 2.3%;
+  width: 510px;
+  transform: translateY(100%);
+  transition: transform .3s ease-in-out;
+}
+.newEmail--active {
+  transform: translateY(0);
+}
+.newEmail__card {
+  width: 100%;
+}
+.newEmail__topMenu {
+  color: #ffffff;
+}
+.newEmail__titleArea {
+  color: #ffffff;
+  background: #404040;
+}
+.newEmail__title {
+  font-size: 14px;
+  letter-spacing: .2px;
+  font-weight: 500;
+  padding: 7px 0;
+}
+.newEmail__body {
+  box-sizing: border-box;
+  width: 100%;
+}
+.newEmail .mdl-textfield {
+  width: 100%;
+}
+.newEmail textarea.mdl-textfield__input {
+  height: 200px;
+}

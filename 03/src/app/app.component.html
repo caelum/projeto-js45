@@ -1,0 +1,69 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <cmail-header></cmail-header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-grid">
+        <!-- Floating Multiline Textfield -->
+        <button class="globalFab tooltip btn mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+          role="tooltip" aria-label="Criar novo email">
+          <span class="material-icons">add</span>
+        </button>
+
+        <!-- newEmail--active -->
+        <form action="#" class="newEmail cmailForm">
+          <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="newEmail__titleArea mdl-card__title">
+              <h2 class="newEmail__title mdl-card__title-text">Novo Email</h2>
+            </div>
+            <div class="newEmail__body mdl-card__supporting-text">
+              <!-- Form Fields -->
+              <!-- [Para] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label">
+                  <input name="para" placeholder=" " required="" type="para" id="para" class="mdl-textfield__input">
+                  <span class="mdl-textfield__error">Informar um email é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="email"> Para: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Para] -->
+
+              <!-- [Assunto] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label">
+                  <input name="assunto" placeholder=" " required="" type="assunto" id="assunto" class="mdl-textfield__input">
+                  <span class="mdl-textfield__error">Informar um assunto é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="email"> Assunto: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Assunto] -->
+
+              <!-- [Conteúdo] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label">
+                  <textarea class="mdl-textfield__input" type="text" rows="3" id="sample5" placeholder=" "></textarea>
+                  <span class="mdl-textfield__error">Informar um conteúdo é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="email"> Conteúdo: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Conteúdo] -->
+
+              <!-- ./Form Fields -->
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <a class="mdl-button">
+                Enviar
+              </a>
+            </div>
+            <div class="newEmail__topMenu mdl-card__menu">
+              <button type="button" class="mdl-button mdl-button--icon">
+                <span class="material-icons">close</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>

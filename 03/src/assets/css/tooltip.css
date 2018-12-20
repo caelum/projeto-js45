@@ -1,0 +1,91 @@
+.tooltip {
+ position: relative;
+ overflow: initial !important;
+}
+
+.tooltip:before {
+ content: attr(aria-label);
+ display: block;
+ position: absolute;
+ white-space: nowrap;
+ text-transform: capitalize;
+ border-radius: 2px;
+ line-height: 1.5em;
+ background-color: #323232;
+ padding: 10px 25px;
+ font-size: 1.1rem;
+ font-weight: 300;
+ color: #fff;
+ cursor: default;
+ opacity: 0;
+ transition: opacity .5s, transform .5s !important;
+ transform: translateX(-90%) translateY(-50%);
+ pointer-events: none;
+ will-change: transform;
+}
+
+.tooltip:focus:before,
+.tooltip:hover:before {
+ opacity: 1;
+ transform: translateX(-110%) translateY(-50%);
+ pointer-events: all;
+}
+
+
+
+.tooltip--left:before {
+ transform: translateX(0%) translateY(-15%);
+}
+.tooltip--left:focus:before,
+.tooltip--left:hover:before {
+ opacity: 1;
+ transform: translateX(30%) translateY(-15%);
+ pointer-events: all;
+}
+
+cmail-form-component.css .cmailInputForm .mdl-textfield {
+   color: #757575;
+}
+.cmailInputForm .mdl-textfield:focus-within {
+   color: rgb(63,81,181);
+}
+.cmailInputForm .mdl-textfield.is-invalid {
+   color: #d50000;
+}
+
+.cmailInputForm .mdl-textfield.is-invalid .mdl-textfield__label {
+   font-size: 16px;
+}
+
+.cmailInputForm .mdl-textfield__formline {
+   content: "";
+   display: block;
+   position: absolute;
+   bottom: 19px;
+   width: 100%;
+   height: 2px;
+   opacity: 1;
+   transition: opacity .3s, transform .3s;
+   background-color: currentColor;
+   transform: scale(0);
+}
+
+.cmailInputForm .mdl-textfield__input:not(:placeholder-shown) ~ .mdl-textfield__formline,
+.cmailInputForm .mdl-textfield:focus-within .mdl-textfield__formline {
+   opacity: 1;
+   transform: scale(1);
+}
+
+.cmailInputForm .mdl-textfield__input {
+   outline: 0;
+   transition: color .2s, background .2s;
+   color: #757575;
+}
+
+.cmailInputForm .mdl-textfield__input:not(:placeholder-shown) ~ .mdl-textfield__label,
+.cmailInputForm .mdl-textfield__input:focus ~ .mdl-textfield__label {
+   color: currentColor;
+   font-size: 12px !important;
+   top: 4px;
+   visibility: visible;
+}
