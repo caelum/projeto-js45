@@ -1,0 +1,83 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <cmail-header></cmail-header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="mdl-grid">
+        <ul>
+          <li *ngFor="let email of emailList">
+            <strong>Para:</strong>{{email.destinatario}} <br>
+            <strong>Assunto:</strong>{{email.assunto}}
+          </li>
+        </ul>
+      </div>
+
+      <div class="mdl-grid">
+        <!-- Floating Multiline Textfield -->
+        <button class="globalFab tooltip btn mdl-button mdl-js-button mdl-button--fab mdl-button--colored" role="tooltip"
+          aria-label="Criar novo email" (click)="toggleNewEmailForm()">
+          <span class="material-icons">add</span>
+        </button>
+
+        <!-- newEmail--active -->
+        <form class="newEmail cmailForm" [ngClass]="{ 'newEmail--active': isNewEmailFormOpen }" #formEmail="ngForm"
+          (ngSubmit)="handleNewEmail(formEmail)">
+
+          <div class="newEmail__card demo-card-wide mdl-card mdl-shadow--2dp">
+            <div class="newEmail__titleArea mdl-card__title">
+              <h2 class="newEmail__title mdl-card__title-text">Novo Email</h2>
+            </div>
+            <div class="newEmail__body mdl-card__supporting-text">
+              <!-- Form Fields -->
+              <!-- [Para] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label" [ngClass]="{'is-invalid': destinatario.invalid && destinatario.touched}">
+                  <input #destinatario="ngModel" [(ngModel)]="email.destinatario" required type="email" name="para" id="para"
+                    class="mdl-textfield__input">
+                  <span class="mdl-textfield__error">Informar um email é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="para">Para: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Para] -->
+
+              <!-- [Assunto] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label" [ngClass]="{'is-invalid': assunto.invalid && assunto.touched}">
+                  <input #assunto="ngModel" [(ngModel)]="email.assunto" required type="assunto" name="assunto" id="assunto"
+                    class="mdl-textfield__input">
+                  <span class="mdl-textfield__error">Informar um assunto é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="email"> Assunto: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Assunto] -->
+
+              <!-- [Conteúdo] -->
+              <div class="cmailInputForm">
+                <div class="mdl-textfield mdl-textfield--floating-label">
+                  <textarea #conteudo="ngModel" [(ngModel)]="email.conteudo" name="conteudo" class="mdl-textfield__input"
+                    id="conteudo"></textarea>
+                  <span class="mdl-textfield__error">Informar um conteúdo é obrigatório!</span>
+                  <label class="mdl-textfield__label" for="conteudo">Conteúdo: </label>
+                  <span class="mdl-textfield__formline"></span>
+                </div>
+              </div><!-- ./[Conteúdo] -->
+
+              <!-- ./Form Fields -->
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button">
+                Enviar
+              </button>
+            </div>
+            <div class="newEmail__topMenu mdl-card__menu">
+              <button type="button" class="mdl-button mdl-button--icon" (click)="toggleNewEmailForm()">
+                <span class="material-icons">close</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
