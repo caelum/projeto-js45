@@ -1,0 +1,27 @@
+.page-content, .mdl-grid {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.mdl-grid {
+  align-content: center;
+  justify-content: center;
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+
+.demo-card-wide>.mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('http://creativeloads.com/foto/vector-triangle-background-215.jpg') center / cover;
+}
+
+.demo-card-wide>.mdl-card__menu {
+  color: #fff;
+}
+
+.mdl-button.entrar {
+  float: right;
+}
