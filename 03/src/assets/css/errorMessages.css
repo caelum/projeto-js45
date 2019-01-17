@@ -1,0 +1,16 @@
+section.mdl-textfield,
+ul.mdl-textfield {
+  padding: 0;
+  position: static;
+}
+
+section.mdl-textfield .mdl-textfield__error,
+ul.mdl-textfield li.mdl-textfield__error {
+  border: 1px solid #f5c6cb;
+  background-color: #f8d7da;
+  border-radius: .1rem;
+  color: #721c24;
+  margin-bottom: 1rem;
+  padding: .75rem 1.25rem;
+  position: relative;
+}
