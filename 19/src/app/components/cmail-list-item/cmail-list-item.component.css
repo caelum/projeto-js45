@@ -1,0 +1,54 @@
+.emailList__item {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .5s;
+  outline: none;
+}
+
+.emailList__item:hover {
+  box-shadow: 0 0 0 1px #ddd, 2px 3px 13px 3px #ddd;
+}
+.emailList__item:focus {
+  box-shadow: 0 0 0 1px #ddd, 2px 3px 13px 3px #bbb;
+}
+.emailList__item:not(:nth-last-of-type(1)) {
+  border-bottom: 1px solid #dddddd;
+}
+
+.emailList__item:hover .emailList__itemMenu,
+.emailList__item:focus-within .emailList__itemMenu {
+  transform: translateX(0);
+}
+.emailList__itemMenu {
+  transform: translateX(100%);
+  transition: transform .3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 10px;
+  min-width: 170px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emailList__itemLink {
+  text-decoration: none;
+}
+
+
+@media (max-width: 670px) {
+  .emailList__itemText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 190px;
+  }
+}
+
+.emailList__itemDate {
+  font-size: 15px;
+  text-align: right;
+  display: inline-block;
+  color: #aaa;
+}
