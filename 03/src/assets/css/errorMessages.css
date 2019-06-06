@@ -14,3 +14,13 @@ ul.mdl-textfield li.mdl-textfield__error {
   padding: .75rem 1.25rem;
   position: relative;
 }
+
+.mdl-textfield__checking {
+  color:blue;
+  visibility: visible;
+}
+
+.mdl-textfield__valid {
+  color:green;
+  visibility: visible;
+}
